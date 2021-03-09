@@ -1,0 +1,135 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+ header {
+  
+} 
+
+h1, h2 {
+  margin: 0 auto; /* I did this because I thought I needed to create a margin that would allow centering to make a difference */
+  text-align: center;
+}
+
+p, li {
+  padding: 0 1em;
+}
+
+section {
+  min-height: 50vh;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  padding: 1em 0;
+
+}
+
+
+
+header, footer {
+  text-align: center;  
+  background-color: #8E44AD;
+  color:silver;
+  padding: 1rem 0;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+
+
+
+
+
+
+
+/* ---- Layout Containers ---- */
+
+.wrapper {
+
+}
+.container {
+  width: 90%;
+   margin: 0 auto;  
+  max-width: 1000px;
+  padding: 1em 0;
+}
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width:768px) and (orientation: landscape) {
+
+  .wrapper {
+    min-height: calc(100vh-32px);
+    }
+
+header {
+
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  display:flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.container {
+width: 90%;
+margin: 0 auto;
+max-width: 1000px;
+display: flex;
+flex-wrap:wrap;
+justify-content: space-between;
+}
+/* nav ul li {
+  display: inline-block;
+  width:30%;
+} */
+
+section {
+  max-width: 400px;
+  margin: 5px;
+}
+}
+
+@media (min-width:1024px) and (orientation: landscape) {
+  #wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  section {
+    flex:30%;
+  }
+}
