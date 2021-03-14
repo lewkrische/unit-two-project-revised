@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
- header {
+ .main-header {
   
 } 
 
@@ -29,7 +29,7 @@ section {
 
 
 
-header, footer {
+.main-header, footer {
   text-align: center;  
   background-color: #8E44AD;
   color:silver;
@@ -42,6 +42,7 @@ img {
   height: auto;
   border-style: solid;
   border-width: 1px;
+  max-width: 400px;
 }
 
 
@@ -55,12 +56,23 @@ img {
 /* ---- Navigation ---- */
 
 
+.item {
+  display: flex;
+	color: white;
+	padding: 15px;
+	margin: 5px;	
+	background: rgba(145, 144, 144, 0.74);
+	border-radius: 3px;
+}
 
+li {
+  color: white;
+}
 
-
-
-
-
+.item a {
+  text-decoration: none;
+  color: white;
+}
 /* ---- Layout Containers ---- */
 
 .wrapper {
@@ -76,7 +88,11 @@ img {
 /* ================================= 
   Flexbox
 ==================================== */
-
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 
 /* ================================= 
@@ -89,20 +105,25 @@ img {
     min-height: calc(100vh-32px);
     }
 
-header {
-
-  flex-direction: column;
+  .main-header{
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
 }
-header {
-  display:flex;
+
+h1 {
+  float:left;
 }
 
 .menu {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
 }
 
+.item {
+  flex:1 auto;
+  align-self: flex-start;
+}
 
 .container {
 width: 90%;
@@ -111,6 +132,7 @@ max-width: 1000px;
 display: flex;
 flex-wrap:wrap;
 justify-content: space-between;
+align-self: stretch;
 }
 /* nav ul li {
   display: inline-block;
@@ -118,8 +140,14 @@ justify-content: space-between;
 } */
 
 section {
+  min-height: 40vh;
   max-width: 400px;
-  margin: 5px;
+  margin: 20px 5px;
+  position: relative;
+}
+section img {
+  position: absolute;
+  bottom:0;
 }
 }
 
@@ -129,6 +157,18 @@ section {
     margin: 0 auto;
   }
 
+  .profile {
+    display: flex;
+    flex-direction: row wrap;
+  }
+
+  .main-header {
+    flex-direction: row;
+    justify: space-between;
+  }
+.profile img {
+  flex:50%;
+}
   section {
     flex:30%;
   }
