@@ -6,12 +6,16 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: black;
+}
  .main-header {
   
 } 
 
-h1, h2 {
-  margin: 0 auto; /* I did this because I thought I needed to create a margin that would allow centering to make a difference */
+h2 {
   text-align: center;
 }
 
@@ -24,7 +28,7 @@ section {
   margin-bottom: 10%;
   margin-top: 5%;
   padding: 1em 0;
-
+  hyphens: auto;
 }
 
 
@@ -33,7 +37,8 @@ section {
   text-align: center;  
   background-color: #8E44AD;
   color:silver;
-  padding: 1rem 0;
+  padding: 1rem;
+
 
 }
 
@@ -43,6 +48,8 @@ img {
   border-style: solid;
   border-width: 1px;
   max-width: 400px;
+  box-shadow: 5px 10px 8px #888888;
+  border-radius: 5%;
 }
 
 
@@ -63,7 +70,9 @@ img {
 	margin: 5px;	
 	background: rgba(145, 144, 144, 0.74);
 	border-radius: 3px;
+  justify-content: center;
 }
+
 
 li {
   color: white;
@@ -75,14 +84,22 @@ li {
 }
 /* ---- Layout Containers ---- */
 
-.wrapper {
 
-}
 .container {
   width: 90%;
    margin: 0 auto;  
   max-width: 1000px;
   padding: 1em 0;
+}
+
+.glow {
+  font-size: 3rem;
+  color: silver;
+  text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee;
 }
 
 /* ================================= 
@@ -102,7 +119,7 @@ li {
 @media (min-width:768px) and (orientation: landscape) {
 
   .wrapper {
-    min-height: calc(100vh-32px);
+   
     }
 
   .main-header{
@@ -111,9 +128,6 @@ li {
   align-items: center;
 }
 
-h1 {
-  float:left;
-}
 
 .menu {
   display: flex;
@@ -133,14 +147,12 @@ display: flex;
 flex-wrap:wrap;
 justify-content: space-between;
 align-self: stretch;
+min-height: calc(100vh-32px);
 }
-/* nav ul li {
-  display: inline-block;
-  width:30%;
-} */
+
 
 section {
-  min-height: 40vh;
+  min-height: 48vh;
   max-width: 400px;
   margin: 20px 5px;
   position: relative;
@@ -164,12 +176,27 @@ section img {
 
   .main-header {
     flex-direction: row;
-    justify: space-between;
+    justify-content: space-between;
+    text-align: left;
   }
-.profile img {
-  flex:50%;
-}
+
   section {
     flex:30%;
+  }
+  .item4 {
+   order:1;
+  }
+
+  .item5 {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  
+  h1 {
+    /* 
+     */
+  }
+  .glow {
+
   }
 }
