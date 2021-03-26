@@ -24,10 +24,10 @@ p, li {
 }
 
 section {
-  min-height: 50vh;
-  margin-bottom: 10%;
-  margin-top: 5%;
-  padding: 1em 0;
+  min-height: 250px;
+  margin: 10px 0;
+  /* padding: 1em; */
+  text-align: center;
   hyphens: auto;
 }
 
@@ -147,18 +147,15 @@ display: flex;
 flex-wrap:wrap;
 justify-content: space-between;
 align-self: stretch;
-min-height: calc(100vh-32px);
+min-height: calc(100vh - 32px);
 }
 
 
 section {
-  min-height: 48vh;
-  max-width: 400px;
-  margin: 20px 5px;
-  position: relative;
+  height: 25%;
+  flex-basis: calc(50% - 10px);
 }
 section img {
-  position: absolute;
   bottom:0;
 }
 }
@@ -181,7 +178,9 @@ section img {
   }
 
   section {
-    flex:30%;
+    flex-basis: calc(33.333% - 10px);
+    
+
   }
   .item4 {
    order:1;
