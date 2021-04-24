@@ -33,7 +33,7 @@ section {
 
 
 
-.main-header, footer {
+.main-header, .main-footer {
   text-align: center;  
   background-color: #8E44AD;
   color:silver;
@@ -42,12 +42,13 @@ section {
 
 }
 
+
 img {
   width: 100%;
-  height: auto;
+  /* height: auto; */
   border-style: solid;
   border-width: 1px;
-  max-width: 400px;
+  /* max-width: 400px; */
   box-shadow: 5px 10px 8px #888888;
   border-radius: 5%;
 }
@@ -73,13 +74,21 @@ img {
   justify-content: center;
 }
 
-
+ul {
+  list-style: none;
+}
 li {
   color: white;
 }
 
 .item a {
   text-decoration: none;
+  color: white;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
   color: white;
 }
 /* ---- Layout Containers ---- */
@@ -121,8 +130,12 @@ li {
   .wrapper {
    
     }
+    .container-portfolio {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-  .main-header{
+  .main-header, .main-footer {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -134,9 +147,22 @@ li {
   flex-flow: row wrap;
 }
 
+.bottom-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 0 20px;
+  height: 100px;
+}
+
 .item {
   flex:1 auto;
   align-self: flex-start;
+}
+
+.full {
+  display: none;
 }
 
 .container {
@@ -150,37 +176,50 @@ align-self: stretch;
 min-height: calc(100vh - 32px);
 }
 
-
-section {
-  height: 25%;
+section.portfolio {
+  /* height: 25%; */
+  display: flex;
+  padding: 0 1em;
+  flex-direction: column;
   flex-basis: calc(50% - 10px);
 }
-section img {
-  bottom:0;
+
+.portfolio img {
+  margin-top: auto;
+  border: solid blue 2px;
 }
 }
 
+.top {
+  display: none;
+}
+
+.full {
+  display: inline-block;
+  margin-left:20px;
+}
 @media (min-width:1024px) and (orientation: landscape) {
   #wrapper {
     max-width: 1000px;
     margin: 0 auto;
   }
 
-  .profile {
+  .profile, .bottom-footer {
     display: flex;
     flex-direction: row wrap;
   }
 
-  .main-header {
+  .main-header, .bottom-menu{
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
 
-  section {
-    flex-basis: calc(33.333% - 10px);
-    
 
+  
+
+  section.portfolio {
+    flex-basis: calc(33.333% - 10px);
   }
   .item4 {
    order:1;
